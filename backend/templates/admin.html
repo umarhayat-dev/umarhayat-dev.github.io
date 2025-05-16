@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js ss-preload">
+<head>
+    <meta charset="UTF-8" />
+    <title>Admin Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/css/vendor.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <style>
+        /* Admin-specific styles */
+        section.admin-section {
+            margin-bottom: var(--vspace-3);
+            padding: var(--vspace-1);
+            background-color: var(--color-gray-10);
+            border-radius: var(--border-radius);
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .admin-section label {
+            display: block;
+            margin-top: var(--vspace-0_5);
+            font-weight: 600;
+            color: var(--color-text-light);
+        }
+        .admin-section input[type="text"], .admin-section input[type="url"], .admin-section textarea {
+            width: 100%;
+            padding: var(--vspace-0_5);
+            margin-top: var(--vspace-0_25);
+            background-color: var(--color-gray-9);
+            border: none;
+            border-radius: var(--border-radius);
+            color: var(--color-text-light);
+            font-family: var(--font-1);
+            font-size: var(--text-size);
+            resize: vertical;
+        }
+        .admin-section button {
+            margin-top: var(--vspace-1);
+        }
+        .admin-section .message {
+            margin-top: var(--vspace-0_5);
+            color: var(--color-success-content);
+        }
+        .admin-section .error {
+            color: var(--color-error-content);
+        }
+        .admin-section .item {
+            margin-bottom: var(--vspace-0_5);
+            padding: var(--vspace-0_5);
+            background-color: var(--color-gray-9);
+            border-radius: var(--border-radius);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--color-text-light);
+        }
+        .admin-section .item button {
+            background-color: var(--color-btn-stroke);
+            color: var(--color-btn-stroke-text);
+            border: none;
+            padding: var(--vspace-0_25) var(--vspace-0_5);
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-family: var(--font-1);
+            font-size: var(--text-sm);
+        }
+        .admin-section .item button:hover {
+            background-color: var(--color-btn-stroke-hover);
+            color: var(--color-btn-stroke-hover-text);
+        }
+    </style>
+</head>
+<body id="top">
+
+    <div class="s-pagewrap">
+
+        <div class="circles">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- ## site header -->
+        <header class="s-header">
+
+            <div class="header-mobile">
+                <span class="mobile-home-link"><a href="index.html">Luther.</a></span>
+                <a class="mobile-menu-toggle" href="#0"><span>Menu</span></a>
+            </div>
+
+            <div class="row wide main-nav-wrap">
+                <nav class="column lg-12 main-nav">
+                    <ul>
+                        <li><a href="index.html" class="home-link">Luther.</a></li>
+                        <li><a href="#intro" class="smoothscroll">Intro</a></li>
+                        <li><a href="#about" class="smoothscroll">About</a></li>
+                        <li><a href="#works" class="smoothscroll">Works</a></li>
+                        <li><a href="#contact" class="smoothscroll">Say Hello</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </header> <!-- end s-header -->
+
+        <main class="s-content">
+
+            <h2 class="text-huge-title">Admin Dashboard</h2>
+
+            <section id="content-section" class="admin-section">
+                <h3 class="text-pretitle with-line">Edit Content</h3>
+                <label for="section-select">Select Section to Edit</label>
+                <select id="section-select" name="section-select" class="u-fullwidth">
+                    <option value="intro">Intro</option>
+                    <option value="about">About</option>
+                    <option value="works">Works</option>
+                    <option value="contact">Contact</option>
+                    <option value="footer">Footer</option>
+                    <option value="testimonials">Testimonials</option>
+                </select>
+
+                <form id="content-form">
+                    <!-- Intro Section -->
+                    <div class="form-section" data-section="intro">
+                        <label for="intro-pretitle">Intro Pretitle</label>
+                        <input type="text" id="intro-pretitle" name="intro.pretitle" />
+
+                        <label for="intro-title">Intro Title</label>
+                        <textarea id="intro-title" name="intro.title" rows="3"></textarea>
+                    </div>
+
+                    <!-- About Section -->
+                    <div class="form-section" data-section="about" style="display:none;">
+                        <label for="about-cv-button-text">About CV Button Text</label>
+                        <input type="text" id="about-cv-button-text" name="about.cv_button_text" />
+
+                        <label for="about-cv-button-link">About CV Button Link</label>
+                        <input type="url" id="about-cv-button-link" name="about.cv_button_link" />
+                    </div>
+
+                    <!-- Contact Section -->
+                    <div class="form-section" data-section="contact" style="display:none;">
+                        <label for="contact-button-text">Contact Button Text</label>
+                        <input type="text" id="contact-button-text" name="contact.contact_button_text" />
+
+                        <label for="contact-button-link">Contact Button Link</label>
+                        <input type="url" id="contact-button-link" name="contact.contact_button_link" />
+                    </div>
+
+                    <!-- Footer Section -->
+                    <div class="form-section" data-section="footer" style="display:none;">
+                        <label for="footer-copyright-text">Copyright Text</label>
+                        <input type="text" id="footer-copyright-text" name="footer.copyright_text" />
+                    </div>
+
+                    <!-- Testimonials Section -->
+                    <div class="form-section" data-section="testimonials" style="display:none;">
+                        <label for="testimonial-text">Testimonial Text</label>
+                        <textarea id="testimonial-text" name="testimonial.text" rows="3"></textarea>
+
+                        <label for="testimonial-author">Author</label>
+                        <input type="text" id="testimonial-author" name="testimonial.author" />
+                    </div>
+
+                    <!-- Works Section -->
+                    <div class="form-section" data-section="works" style="display:none;">
+                        <label for="project-title">Project Title</label>
+                        <input type="text" id="project-title" name="project.title" />
+
+                        <label for="project-description">Project Description</label>
+                        <textarea id="project-description" name="project.description" rows="3"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary">Save Content</button>
+                </form>
+                <div id="content-message" class="message"></div>
+            </section>
+
+            <section id="photos-section" class="admin-section">
+                <h3 class="text-pretitle with-line">Manage Photos</h3>
+                <form id="photo-upload-form" enctype="multipart/form-data">
+                    <input type="file" id="photo-file" name="photo" accept="image/*" required />
+                    <button type="submit" class="btn btn--primary">Upload Photo</button>
+                </form>
+                <div class="photo-list" id="photo-list"></div>
+                <div id="photo-message" class="message"></div>
+            </section>
+
+            <section id="testimonials-section" class="admin-section">
+                <h3 class="text-pretitle with-line">Manage Testimonials</h3>
+                <form id="testimonial-form">
+                    <label for="testimonial-text">Testimonial Text</label>
+                    <textarea id="testimonial-text" name="testimonial.text" rows="3" required></textarea>
+
+                    <label for="testimonial-author">Author</label>
+                    <input type="text" id="testimonial-author" name="testimonial.author" required />
+
+                    <button type="submit" class="btn btn--primary">Add Testimonial</button>
+                </form>
+                <div class="testimonial-list" id="testimonial-list"></div>
+                <div id="testimonial-message" class="message"></div>
+            </section>
+
+            <section id="projects-section" class="admin-section">
+                <h3 class="text-pretitle with-line">Manage Projects</h3>
+                <form id="project-form">
+                    <label for="project-title">Project Title</label>
+                    <input type="text" id="project-title" name="project.title" required />
+
+                    <label for="project-description">Project Description</label>
+                    <textarea id="project-description" name="project.description" rows="3" required></textarea>
+
+                    <button type="submit" class="btn btn--primary">Add Project</button>
+                </form>
+                <div class="project-list" id="project-list"></div>
+                <div id="project-message" class="message"></div>
+            </section>
+
+            <form method="POST" action="/admin/logout">
+                <button type="submit" class="btn btn--stroke">Logout</button>
+            </form>
+
+        </main> <!-- end s-content -->
+
+        <!-- ## footer -->
+        <footer class="s-footer">
+
+            <div class="row">
+                <div class="column ss-copyright">
+                    <span>© Copyright Luther 2021</span> 
+                    <span>Design by <a href="https://www.styleshout.com/">StyleShout</a> Distribution By <a href="https://themewagon.com">Themewagon</a></span>
+                </div>
+
+                <div class="ss-go-top">
+                    <a class="smoothscroll" title="Back to Top" href="#top">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+        </footer> <!-- end s-footer -->
+
+    </div> <!-- end s-pagewrap -->
+
+    <script src="/js/plugins.js"></script>
+    <script src="/js/main.js"></script>
+    <script>
+        // JavaScript to handle section dropdown and form display
+        document.addEventListener('DOMContentLoaded', function() {
+            const sectionSelect = document.getElementById('section-select');
+            const formSections = document.querySelectorAll('.form-section');
+
+            function showSection(section) {
+                formSections.forEach(fs => {
+                    if (fs.getAttribute('data-section') === section) {
+                        fs.style.display = 'block';
+                    } else {
+                        fs.style.display = 'none';
+                    }
+                });
+            }
+
+            sectionSelect.addEventListener('change', function() {
+                showSection(this.value);
+            });
+
+            // Initialize display
+            showSection(sectionSelect.value);
+        });
+    </script>
+
+</body>
+</html>
