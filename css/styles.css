@@ -3158,7 +3158,7 @@ img.u-pull-left {
     }
 
     .main-nav ul li:first-child {
-        display : none;
+        display : block;
     }
 
     .menu-is-open .s-header {
@@ -3611,11 +3611,22 @@ img.u-pull-left {
     margin-top        : var(--vspace-4);
     margin-bottom     : var(--vspace-1);
     margin-left       : 0;
+    display           : flex;
+    flex-wrap         : wrap;
+    gap               : var(--vspace-1);
+    justify-content   : center;
 }
 
 .folio-list__item {
-    margin-bottom : var(--vspace-1);
+    margin-bottom : 0;
     position      : relative;
+    flex         : 1 1 100%;
+}
+
+@media screen and (min-width: 600px) {
+    .folio-list__item {
+        flex : 1 1 48%;
+    }
 }
 
 .folio-list__item-link {
@@ -4030,7 +4041,7 @@ img.u-pull-left {
 
     .folio-list__item-text,
     .folio-list__proj-link {
-        display : none;
+        display : block;
     }
 
     .modal-popup__desc {
