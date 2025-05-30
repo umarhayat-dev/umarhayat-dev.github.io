@@ -1,0 +1,94 @@
+🧠 Hello World
+Umar Hayat
+Python Developer | AI Systems Architect | Workflow Automation Specialist
+
+I design and deploy AI-powered systems that streamline operations, eliminate bottlenecks, and scale with your team — whether you're a lean startup or an enterprise managing millions of data points.
+
+🔍 About
+I’m a self-taught AI systems engineer with a background in multi-modal data training and enterprise automation. Over the past two years, I’ve led the design, deployment, and optimization of AI-integrated workflows — leveraging LLMs, vector databases, RESTful APIs, and event-driven architectures.
+
+I began in the world of LLM training, fine-tuning large-scale models using structured data pipelines across text, audio, and video modalities. From there, I transitioned into building production-ready automation systems that integrate tools like OpenAI, LangChain, FastAPI, and PostgreSQL — far beyond low-code platforms.
+
+My work is focused on creating intelligent, resilient systems that reduce cognitive load, automate repetitive logic, and allow teams to operate at scale.
+
+💼 Experience
+AI Data Trainer – TaskUs (Remote)
+2022 – 2024
+
+Fine-tuned multi-modal LLMs by curating high-quality prompt data pipelines.
+
+Evaluated model responses across key metrics (factuality, safety, latency) to improve deployment performance.
+
+Collaborated cross-functionally to iterate training workflows and enhance feedback loops.
+
+Tech Support & Automation – Al-Yusr Institute
+2021 – 2022
+
+Built lightweight automation pipelines to reduce manual overhead in scheduling and client onboarding.
+
+Migrated workflows to cloud-based tools (e.g., Make.com + Gmail API) and implemented basic RPA patterns for repetitive tasks.
+
+🎓 Education
+Self-Learning (Ongoing)
+Deep diving into:
+
+AI Agents (AutoGen, LangGraph)
+
+Workflow Orchestration (Celery, Apache Airflow)
+
+Backend Systems (FastAPI, Redis, PostgreSQL)
+
+Applied LLMOps & vector database optimization
+
+MediaOne Academy of Communication
+Video Production Certification, 2022
+
+Model English School, Raipur
+SSC, 2020
+
+🧰 Expertise
+Languages & Frameworks: Python, JavaScript, SQL, React.js, Flask, Django
+
+AI Tooling: OpenAI APIs, LangChain, Hugging Face Transformers, Pinecone, Weaviate
+
+Automation & Integration: FastAPI, Zapier, Make, RESTful APIs, Google Apps Script
+
+Backend & Data: PostgreSQL, MongoDB, Redis, Celery, Supabase
+
+Frontend: React.js, TailwindCSS
+
+DevOps Basics: Docker, GitHub Actions, Firebase
+
+🚀 Projects
+📁 Portfolio Website
+A fully custom-built developer portfolio using React + TailwindCSS with API-connected project updates and smooth SPA routing. Optimized for performance and SEO.
+
+📚 Al-Yusr Institute Platform
+A production-grade React + Firebase stack web platform with real-time auth, user dashboards, dynamic course tiles, and full admin control panel built from scratch.
+
+⏰ Break Reminder Daemon
+A cross-platform Python script using tkinter and apscheduler that runs as a background service, issuing non-intrusive reminders for screen breaks.
+
+✉️ Email-to-Sheets Tracker
+A Gmail API + Google Sheets integration that syncs and parses relevant email threads into structured spreadsheet records using Python and OAuth2.
+
+🔄 Custom Workflow Automations
+Developed modular automations using Python, FastAPI, and OpenAI to streamline sales workflows, auto-tag leads, generate reports, and sync data across CRMs and cloud services — designed for scalability beyond Make/Zapier limitations.
+
+🌌 Future Plans – AI Operating System
+A command-layer for life:
+Imagine saying,
+
+“Summarize today’s emails, update client invoice #42, fetch recent performance logs, and send me a status summary.”
+
+And it just happens.
+
+This isn’t a chatbot. This is a real-time AI agent stack — combining memory, context, execution, and UI abstraction into one personal operating system.
+That’s what I’m building next.
+
+📬 Get in Touch
+Interested in building something smart? I’d love to collaborate. Whether you’re a founder, a CTO, or just curious — reach out. Let’s automate intelligently.
+
+📧 umarhayat.dev@gmail.com
+📞 +91 9630032046 / +971 544410830
+🔗 GitHub | Instagram
